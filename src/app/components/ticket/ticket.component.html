@@ -1,0 +1,28 @@
+<div *ngIf="authService.isLoggedIn">
+    <mat-form-field>
+        <mat-select placeholder="Select an option">
+        <mat-option value="option1">A Galaxis Őrzői</mat-option>
+        <mat-option value="option2">A Nemzet Aranyai</mat-option>
+        <mat-option value="option3">Csizmás a Kandúr</mat-option>
+        <mat-option value="option4">Dungeons and Dragons</mat-option>
+        <mat-option value="option5">Mario Bros</mat-option>
+        <mat-option value="option6">John Wick</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+    <mat-form-field>
+        <mat-select placeholder="Select an option">
+        <mat-option value="option1">17:00</mat-option>
+        <mat-option value="option2">19:00</mat-option>
+        <mat-option value="option3">21:00</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" > Buy </button>
+</div>
+<div *ngIf="!authService.isLoggedIn">You are not logged in!</div>

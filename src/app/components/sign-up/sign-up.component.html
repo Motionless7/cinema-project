@@ -1,0 +1,30 @@
+<div class="displayTable">
+  <div class="displayTableCell">
+    <div class="authBlock">
+      <h3>Sign Up</h3>
+      <form>
+        <mat-form-field class="formGroup">
+          <input matInput type="email" placeholder="Email" #userEmail required>
+        </mat-form-field>
+        <mat-form-field class="formGroup">
+          <input matInput type="password" placeholder="Password" #userPwd required>
+        </mat-form-field>
+        <div class="formGroup">
+          <button mat-raised-button color="primary" (click)="authService.SignUp(userEmail.value, userPwd.value)">Sign Up</button>
+        </div>
+      </form>
+
+      <!-- Continue with Google -->
+      <div class="formGroup">
+        <button mat-raised-button color="accent" (click)="authService.GoogleAuth()">
+          <mat-icon>google</mat-icon>
+          Continue with Google
+        </button>
+      </div>
+    </div>
+    <div class="redirectToLogin">
+      <span>Already have an account? <a class="redirect" routerLink="/sign-in">Log In</a></span>
+    </div>
+  </div>
+</div>
+

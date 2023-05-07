@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <button mat-raised-button class="custom-button" color="accent" routerLink="/movies">Movies</button>
+    <span class="spacer"></span>
+    <button mat-raised-button class="custom-button" color="accent" routerLink="/ticket">Buy a ticket!</button>
+    <span class="spacer"></span>
+    <ng-container *ngIf="authService.isLoggedIn">
+        <button mat-raised-button class="custom-button" color="accent" routerLink="/dashboard">My profile</button>
+        <button mat-raised-button class="custom-button" color="accent" (click)="authService.SignOut()" >Log Out</button>
+    </ng-container>
+    <ng-container *ngIf="!authService.isLoggedIn">
+      <button mat-raised-button class="custom-button" color="accent" routerLink="/sign-in">Sign In</button>
+      <button mat-raised-button class="custom-button" color="accent" routerLink="/register-user">Sign Up</button>
+    </ng-container>
+  </mat-toolbar>

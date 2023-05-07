@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cc-webker": {
+      "hosting": {
+        "cinema-project": [
+          "cc-webker"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cc-webker"
+  }
+}
